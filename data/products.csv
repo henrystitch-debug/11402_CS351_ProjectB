@@ -1,0 +1,36 @@
+productId, name, price, material, quantity, color
+1, T-Shirt, 19.99, Cotton, 100, Blue
+2, Jeans, 49.99, Denim, 50, Black
+3, Hoodie, 39.99, Fleece, 75, Red
+4, Sneakers, 79.99, Leather, 30, White
+5, Jacket, 99.99, Wool, 20, Green
+6, Hat, 14.99, Cotton, 120, Yellow
+7, Socks, 9.99, Wool, 200, White
+8, Gloves, 24.99, Leather, 60, Black
+9, Scarf, 29.99, Silk, 40, Red
+10, Belt, 34.99, Leather, 80, Brown
+11, Shorts, 39.99, Cotton, 90, Blue
+12, Dress, 59.99, Silk, 25, Pink
+13, Boots, 89.99, Leather, 35, Brown
+14, Cap, 19.99, Cotton, 150, Black
+15, Sweater, 49.99, Wool, 55, Gray
+16, Pants, 44.99, Denim, 70, Blue
+17, Skirt, 39.99, Cotton, 45, Green
+18, Coat, 119.99, Wool, 15, Black
+19, Sandals, 29.99, Rubber, 100, White
+20, Tie, 24.99, Silk, 50, Blue
+21, Blouse, 34.99, Cotton, 60, White
+22, Vest, 49.99, Fleece, 40, Red
+23, Flip-Flops, 14.99, Rubber, 120, Yellow
+24, Beanie, 19.99, Wool, 80, Gray
+25, Leggings, 29.99, Nylon, 90, Black
+26, Polo Shirt, 24.99, Cotton, 110, Green
+27, Cardigan, 59.99, Wool, 30, Pink
+28, Loafers, 69.99, Leather, 25, Brown
+29, Tank Top, 19.99, Cotton, 130, Red
+30, Parka, 149.99, Nylon, 10, Blue
+31, Mittens, 14.99, Wool, 70, White
+32, Bowtie, 19.99, Silk, 40, Black
+33, Jumpsuit, 79.99, Cotton, 20, Gray
+34, Espadrilles, 39.99, Canvas, 50, White
+35, Poncho, 49.99, Wool, 35, Green
