@@ -13,7 +13,7 @@ A lightweight database and query engine for processing CSV files.
 
 ### Prerequisites
 
-- Python 3.8+
+- C++
 
 ### Installation
 
@@ -27,10 +27,21 @@ cd 11402_CS351_ProjectB
 
 ```
 ├── README.md
+├── CMakeLists.txt
+├── build/
+├── data/
+│   └── products.csv
+├── docs/
+│   ├── 00_intended_usem.d
+│   └── 01_plan.md 
+│       ...
+├── include/
+│   └── csv_processor.h
 ├── src/
-│   └── csv_processor.cpp
+│   ├── csv_processor.cpp
+│   └── main.cpp
 └── tests/
-    └── test_engine.cpp
+    └── test_csv_processor.cpp
 ```
 
 ## License
