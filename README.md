@@ -22,24 +22,15 @@ git clone <https://github.com/henrystitch-debug/11402_CS351_ProjectB.git>
 cd 11402_CS351_ProjectB
 ```
 
-### Usage
-
-```python
-from csv_engine import Database
-
-db = Database()
-db.load_csv('data.csv')
-results = db.query('SELECT * WHERE condition')
-```
 
 ## Project Structure
 
 ```
 ├── README.md
 ├── src/
-│   └── csv_engine.py
+│   └── csv_processor.cpp
 └── tests/
-    └── test_engine.py
+    └── test_engine.cpp
 ```
 
 ## License
