@@ -1,9 +1,0 @@
-# ninja log v7
-11	652	8004540133437729	CMakeFiles/csv_db.dir/src/main.cpp.obj	aeccc39595b3ca2c
-24	714	8004540133569084	CMakeFiles/run_tests.dir/tests/test_csv_processor.cpp.obj	e5fb1724f7d4742f
-3	1213	8004540133277044	CMakeFiles/csv_core.dir/src/csv_processor.cpp.obj	b9b9499b75e81b13
-1214	1848	8004540145469229	libcsv_core.a	ec198b614247f19e
-1848	2120	8004540151813715	csv_db.exe	edd243f608c903ec
-1879	2120	8004540152135544	run_tests.exe	54c1edee81c33a8a
-5	831	8004550966240914	CMakeFiles/run_tests.dir/tests/test_csv_processor.cpp.obj	656317e45686fcaa
-832	1062	8004550974499092	run_tests.exe	54c1edee81c33a8a
