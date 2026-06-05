@@ -4,29 +4,18 @@ This document describes how to deploy the lightweight database and query engine 
 
 ## Requirements
 
-- Python 3.11 or later
-- pip
+- C++
 - Git (optional, for cloning the repository)
 - Access to the CSV dataset files
 
 ## Setup
 
-1. Clone the repository (if needed):
+  Clone the repository (if needed):
    ```bash
-   git clone https://your-repo-url.git
+   git clone https://henrystitch-debug/11402_CS351/ProjectB.git
    cd 11402_CS351_ProjectB
    ```
 
-2. Create and activate a virtual environment:
-   ```bash
-   python -m venv .venv
-   .venv\Scripts\activate
-   ```
-
-3. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
 
 ## Configuration
 
@@ -39,13 +28,15 @@ This document describes how to deploy the lightweight database and query engine 
 To start the query engine, run the main entry point for the project. From the repository root:
 
 ```bash
-python -m src.main
+g++ src/main.cpp src/csv_processor.cpp -o build/csv_db -Iinclude -Wall -Wextra -std=c++17   
 ```
 
-or use the provided script if one exists:
+or run the tests:
 
 ```bash
-python run.py
+g++ tests/test_csv_processor.cpp src/csv_processor.cpp -o run_tests -Iinclude -Wall -Wextra -std=c++17
+>> ./run_tests.exe
+
 ```
 
 ## Deployment Notes

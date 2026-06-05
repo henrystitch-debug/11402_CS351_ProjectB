@@ -26,10 +26,9 @@ CSV File → CSV Loader → Data Store → Query Parser → Query Engine → Res
 **Responsibility**: Load CSV files and convert them into in-memory table structures
 
 **Key Functions**:
-- `loadCSV(filepath)`: Reads CSV file and creates table
-- `parseRow(line)`: Parses individual CSV row
-- `validateData()`: Ensures data integrity
-
+- `loadCSV()`: Reads CSV file and creates table
+- `reset()`: Resets database to original
+- `executeQuery()`: Executes th queries - calls the right functions
 **Data Structures**:
 - Table: In-memory representation of CSV data
 - Row: Collection of column values
@@ -52,13 +51,6 @@ CSV File → CSV Loader → Data Store → Query Parser → Query Engine → Res
 - SELECT: Column projection
 - WHERE: Row filtering
 - ORDER BY: Result sorting
-- GROUP BY: Data aggregation
-- JOIN: Multi-table operations
-
-**Key Functions**:
-- `parse(queryString)`: Convert query to AST
-- `validate(ast)`: Verify query validity
-- `optimize(ast)`: Optimize query execution plan
 
 ### 3.4 Query Engine Module
 
@@ -84,15 +76,22 @@ CSV File → CSV Loader → Data Store → Query Parser → Query Engine → Res
 ## 4. Class Diagram
 
 ```
-Database
-├── Table[]
-│   ├── Column[]
-│   └── Row[]
-│
-QueryEngine
-├── Parser
-├── Executor
-└── ResultManager
+├── README.md
+├── CMakeLists.txt
+├── build/
+├── data/
+│   └── products.csv
+├── docs/
+│   ├── 00_intended_usem.d
+│   └── 01_plan.md 
+│       ...
+├── include/
+│   └── csv_processor.h
+├── src/
+│   ├── csv_processor.cpp
+│   └── main.cpp
+└── tests/
+    └── test_csv_processor.cpp
 ```
 
 ## 5. Data Structures

@@ -8,13 +8,11 @@ The intended use of this project is to provide a simple, efficient tool for:
 - loading CSV data
 - executing basic queries and filters
 - performing aggregations and projections
-- exploring and transforming CSV datasets without a full database server
 
 ## Use Cases
 
 Typical use cases include:
 - analyzing CSV datasets for small to medium-sized projects
-- prototyping data queries before migrating to a larger database
 - teaching or learning query processing concepts
 - automating CSV-based data workflows
 

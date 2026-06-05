@@ -65,7 +65,7 @@ Out of scope:
 ## 7. Test Data
 - Small CSV dataset (10-50 rows) with mixed data types.
 - Medium CSV dataset (500-1000 rows) with repeated values.
-- Edge case CSV files: empty file, single-row file, malformed rows.
+- Edge case CSV files: empty file, no results.
 - Sample join datasets with common key columns.
 
 ## 8. Pass/Fail Criteria
@@ -73,12 +73,3 @@ Out of scope:
 - Fail: Actual output differs from expected output, or system crashes/returns invalid errors.
 - Critical failures include incorrect parsing, incorrect query results, or unhandled exceptions.
 
-## 9. Test Schedule
-- Week 1: Create and execute unit tests for CSV ingestion and parser.
-- Week 2: Create and execute query execution tests and error-handling tests.
-- Week 3: Run integration test cases, finalize regression coverage, and document results.
-
-## 10. Risks and Mitigation
-- Risk: CSV parsing edge cases may be missed. Mitigation: include varied malformed and quoted-field examples.
-- Risk: Query parser ambiguity. Mitigation: define supported syntax and validate with unit tests.
-- Risk: Performance issues on larger files. Mitigation: test with representative medium-sized datasets and optimize hotspots.

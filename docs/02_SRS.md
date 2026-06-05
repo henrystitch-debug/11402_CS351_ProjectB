@@ -26,7 +26,7 @@ The product is a standalone lightweight database engine. It does not depend on a
 ### 2.2 Product Functions
 - Load CSV data into an internal table representation
 - Detect and validate schema from column headers and row values
-- Support SQL-like queries including SELECT, WHERE, ORDER BY, GROUP BY, and basic JOIN operations
+- Support SQL-like queries including SELECT, ORDER BY and Aggregate functions
 - Export query results as CSV or display them in a console-friendly format
 - Provide error handling for malformed CSV files and invalid queries
 

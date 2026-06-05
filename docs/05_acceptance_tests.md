@@ -28,93 +28,79 @@ Assumptions:
 
 Sample data sets used for tests:
 
-1. `employees.csv`
-   - columns: `id`, `name`, `department`, `salary`, `hire_date`
-2. `departments.csv`
-   - columns: `department`, `manager`, `location`
-3. `sales.csv`
-   - columns: `order_id`, `customer_id`, `product`, `quantity`, `price`, `order_date`
+- products.csv (columns: productId, name, price, material, quantity, color)
 
 ## Acceptance Test Cases
 
-### 1. Load CSV File
+### 1. Load and Reset Functions
 
-- Description: Verify the engine can load a CSV file and recognize columns.
+- Description: Verify the engine can load a CSV file and reset it.
 - Steps:
-  1. Load `employees.csv`.
+  1. Load `products.csv`.
   2. Inspect the schema or header.
-- Expected result: The engine reports columns `id`, `name`, `department`, `salary`, `hire_date`.
+  3. Reset the engine.
+- Expected result: The engine successfully loads `products.csv` with columns `productId`, `name`, `price`, `material`, `quantity`, and `color`. Reset clears the loaded data.
 
-### 2. Select and Filter Rows
+### 2. Select a Specific Column
 
-- Description: Verify basic SELECT and WHERE operations.
+- Description: Verify basic SELECT operations on a specific column.
 - Steps:
-  1. Query `employees.csv` for employees in `Sales`.
-  2. Select `name` and `salary`.
-- Expected result: Only rows where `department = 'Sales'` are returned, with correct `name` and `salary` values.
+  1. Load `products.csv`.
+  2. Query and select only the `name` column.
+- Expected result: Only the `name` column is returned for all products.
 
-### 3. Arithmetic Expression
+### 3. Filter Rows by Price
 
-- Description: Verify arithmetic expressions in query projection.
+- Description: Verify filtering capabilities.
 - Steps:
-  1. Query `employees.csv`.
-  2. Compute `salary * 1.1` as `adjusted_salary`.
-- Expected result: Each row includes `adjusted_salary` equal to the original salary multiplied by `1.1`.
+  1. Load `products.csv`.
+  2. Filter rows where `price > 50`.
+- Expected result: Only rows with price greater than 50 are returned with all columns intact.
 
-### 4. Sorting Results
+### 4. Sorting Rows Alphabetically
 
-- Description: Verify ORDER BY support.
+- Description: Verify ORDER BY support for alphabetical sorting.
 - Steps:
-  1. Query `employees.csv`.
-  2. Order by `salary DESC`.
-- Expected result: Rows are sorted from highest to lowest salary.
+  1. Load `products.csv`.
+  2. Order by `name` alphabetically (ASC).
+- Expected result: Rows are sorted alphabetically by product name from A to Z.
 
-### 5. Limit Results
+### 5. Aggregate Functions - MIN
 
-- Description: Verify limit functionality.
+- Description: Verify MIN aggregate function.
 - Steps:
-  1. Query `employees.csv`.
-  2. Limit to top 3 rows by salary.
-- Expected result: Exactly 3 rows are returned.
+  1. Load `products.csv`.
+  2. Compute the minimum `price`.
+- Expected result: The lowest price value from all products is returned.
 
-### 6. Grouping and Aggregation
+### 6. Aggregate Functions - MAX
 
-- Description: Verify GROUP BY and aggregate functions.
+- Description: Verify MAX aggregate function.
 - Steps:
-  1. Query `sales.csv`.
-  2. Group by `product`.
-  3. Compute total `quantity` and total revenue `quantity * price`.
-- Expected result: One aggregated row per product with correct totals.
+  1. Load `products.csv`.
+  2. Compute the maximum `price`.
+- Expected result: The highest price value from all products is returned.
 
-### 7. Join CSV Files
+### 7. Aggregate Functions - AVG
 
-- Description: Verify join across files.
+- Description: Verify AVG aggregate function.
 - Steps:
-  1. Query `employees.csv` and `departments.csv`.
-  2. Join on `department`.
-  3. Select `name`, `department`, `manager`, `location`.
-- Expected result: Each employee row is enriched with matching department manager and location.
+  1. Load `products.csv`.
+  2. Compute the average `price`.
+- Expected result: The mean price value from all products is returned.
 
-### 8. Query with Multiple Conditions
-
-- Description: Verify boolean logic in filters.
-- Steps:
-  1. Query `sales.csv`.
-  2. Filter where `quantity > 5` AND `price < 100`.
-- Expected result: Only rows satisfying both conditions appear.
-
-### 9. Invalid CSV Handling
+### 8. Invalid CSV Handling
 
 - Description: Verify the engine reports errors for malformed input.
 - Steps:
   1. Load a malformed CSV with missing columns or invalid quoting.
 - Expected result: The engine returns a useful error message and does not crash.
 
-### 10. Missing Column Reference
+### 9. Missing Column Reference
 
 - Description: Verify error handling for invalid references.
 - Steps:
-  1. Execute a query selecting a non-existent column from `employees.csv`.
+  1. Execute a query selecting a non-existent column from `products.csv`.
 - Expected result: The engine returns an error indicating the unknown column.
 
 ## Acceptance Criteria
