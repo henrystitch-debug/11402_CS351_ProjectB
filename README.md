@@ -9,7 +9,6 @@ A lightweight database and query engine for processing CSV files.
 - Filter, sort, and aggregate data
 - Export results
 
-## Getting Started
 
 ### Prerequisites
 
